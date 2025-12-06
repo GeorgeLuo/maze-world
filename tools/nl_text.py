@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Print raw NL descriptions from the NL source layout file (one per line)."""
+"""Print raw NL descriptions from the NL source file (one per line)."""
 
 from __future__ import annotations
 
@@ -13,14 +13,18 @@ def extract_nl_descriptions(lines: Iterable[str]) -> List[str]:
     descriptions: List[str] = []
     for raw_line in lines:
         line = raw_line.rstrip("\n")
+        if not line or line.startswith("#"):
+            continue
         if line.startswith("NL "):
             descriptions.append(line[3:])
+        else:
+            descriptions.append(line)
     return descriptions
 
 
 def default_layout_path() -> Path:
-    """Return the default path to the NL source layout file, based on the current working directory."""
-    return Path.cwd() / "world-layout-nl-source" / "world-layout.txt"
+    """Return the default path to the NL source file, based on the current working directory."""
+    return Path.cwd() / "nl.txt"
 
 
 def main() -> int:

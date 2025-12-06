@@ -5,7 +5,7 @@ set -euo pipefail
 
 ROOT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
 DEST_DIR="${ROOT_DIR}/world-layout-stream-new-context"
-DEFAULT_SOURCE="${ROOT_DIR}/world-layout-nl-source/world-layout.txt"
+DEFAULT_SOURCE="${ROOT_DIR}/nl.txt"
 
 usage() {
   cat <<'EOF'
@@ -13,7 +13,7 @@ Usage: ./tools.sh run-stream-new-context [layout_path]
 
 Feeds NL descriptions line-by-line to Codex, accumulating all prior lines into each subsequent prompt.
 Runs inside world-layout-stream-new-context.
-If layout_path is provided, NL descriptions are read from that file instead of world-layout-nl-source/world-layout.txt.
+If layout_path is provided, NL descriptions are read from that file instead of nl.txt at the repo root.
 EOF
 }
 

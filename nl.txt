@@ -1,0 +1,6 @@
+11x11 maze
+there's a traverser in the maze
+there can be multiple traversers
+each traverser has his own algorithm
+traversers do not know the map ahead of time
+some traversers have a special ability, they can branch search, where they duplicate themselves and share a global memory of where they visited
