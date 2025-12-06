@@ -46,7 +46,7 @@ case "$command" in
     exec python3 "$ROOT_DIR/tools/latest_dim.py" "$@"
     ;;
   copy-base)
-    exec "$ROOT_DIR/copy-world-layout-base.sh" "$@"
+    exec "$ROOT_DIR/tools/copy-world-layout-base.sh" "$@"
     ;;
   run-all-at-once)
     exec "$ROOT_DIR/tools/run_all_at_once.sh" "$@"
