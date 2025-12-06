@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Concatenate and print all NL descriptions from world-layout/world-layout.txt."""
+"""Concatenate and print all NL descriptions from world-layout-nl-source/world-layout.txt."""
 
 from __future__ import annotations
 
@@ -19,8 +19,8 @@ def extract_nl_descriptions(lines: Iterable[str]) -> List[str]:
 
 
 def default_layout_path() -> Path:
-    """Return the default path to the world layout file, based on the current working directory."""
-    return Path.cwd() / "world-layout" / "world-layout.txt"
+    """Return the default path to the NL source layout file, based on the current working directory."""
+    return Path.cwd() / "world-layout-nl-source" / "world-layout.txt"
 
 
 def main() -> int:

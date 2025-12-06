@@ -5,14 +5,14 @@ set -euo pipefail
 
 ROOT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
 DEST_DIR="${ROOT_DIR}/world-layout-all-at-once"
-DEFAULT_SOURCE="${ROOT_DIR}/world-layout/world-layout.txt"
+DEFAULT_SOURCE="${ROOT_DIR}/world-layout-nl-source/world-layout.txt"
 
 usage() {
   cat <<'EOF'
 Usage: ./tools.sh run-all-at-once [layout_path]
 
 Feeds all NL descriptions to Codex in a single prompt, working inside world-layout-all-at-once.
-If layout_path is provided, NL descriptions are read from that file instead of world-layout/world-layout.txt.
+If layout_path is provided, NL descriptions are read from that file instead of world-layout-nl-source/world-layout.txt.
 EOF
 }
 

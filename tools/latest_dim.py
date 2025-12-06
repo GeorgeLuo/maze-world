@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Print the latest PHEN/DIM snapshot from world-layout/world-layout.txt."""
+"""Print the latest PHEN/DIM snapshot from world-layout-all-at-once/world-layout.txt by default."""
 
 from __future__ import annotations
 
@@ -66,7 +66,7 @@ def print_snapshot(phens: List[Tuple[str, str]], dims: List[Tuple[str, str]]) ->
 
 def default_layout_path() -> Path:
     """Return the default path to the world layout file, based on the current working directory."""
-    return Path.cwd() / "world-layout" / "world-layout.txt"
+    return Path.cwd() / "world-layout-all-at-once" / "world-layout.txt"
 
 
 def main() -> int:

@@ -18,4 +18,3 @@ Agents have no additional responsibilities outside what is stated inside
 world-layout.txt.
 
 End.
-

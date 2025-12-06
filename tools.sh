@@ -10,14 +10,14 @@ usage() {
 Usage: ./tools.sh <command> [args]
 
 Available commands:
-  concat-nl [layout_path]   Print all NL descriptions from world-layout/world-layout.txt.
-  latest-dim [layout_path]  Show the latest PHEN/DIM snapshot from world-layout/world-layout.txt.
+  concat-nl [layout_path]   Print all NL descriptions (default: world-layout-nl-source/world-layout.txt).
+  latest-dim [layout_path]  Show the latest PHEN/DIM snapshot (default: world-layout-all-at-once/world-layout.txt).
   copy-base <suffix>        Create world-layout-<suffix> from world-layout-base.
   run-all-at-once           Run Codex with all NL descriptions in one prompt (world-layout-all-at-once).
   run-stream-new-context    Run Codex line-by-line, cumulatively (world-layout-stream-new-context).
   run-stream-same-context   Run Codex line-by-line, one line per prompt (world-layout-stream-same-context).
 
-If no layout_path is provided, the tools default to world-layout/world-layout.txt in the current directory.
+If no layout_path is provided, concat-nl/nl-text pull NL lines from world-layout-nl-source/world-layout.txt; latest-dim reads from world-layout-all-at-once/world-layout.txt; the runners read NL from world-layout-nl-source/world-layout.txt.
 
 Examples:
   ./tools.sh concat-nl
