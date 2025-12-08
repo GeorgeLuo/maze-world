@@ -1,0 +1,14 @@
+Latest phenomenon and dimensionalities
+
+Phenomena:
+- traverser_navigation: Traversers navigate the 11x11 maze using their own algorithms while learning the map as they go without prior knowledge.
+- branching_search: Branch-capable traversers duplicate to explore multiple paths while sharing a global visited record.
+
+Dimensionalities:
+- maze_dimensions: 11x11 grid defining the maze bounds.
+- traverser_count: Number of traversers active in the maze; may increase as branch-capable traversers duplicate.
+- traverser_positions: Locations of traverser(s), including branched instances, within the maze cells, updated as they move.
+- traverser_algorithms: Distinct movement or search algorithms assigned per traverser.
+- traverser_knowledge: Per-traverser understanding of maze layout built incrementally from exploration.
+- shared_visited_memory: Global record of visited locations shared among branched traversers.
+- branching_instances: Number of active branch duplicates spawned by branch-capable traversers.

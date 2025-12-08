@@ -1,0 +1,16 @@
+Latest phenomenon and dimensionalities
+
+Phenomena:
+- traverser_navigation: traversers navigate the maze using their own algorithms while exploring an unknown map; some can branch by duplicating and sharing a global visited memory to widen search concurrently
+
+Dimensionalities:
+- maze_width: width of the maze grid in cells; current value 11
+- maze_height: height of the maze grid in cells; current value 11
+- traverser_count: number of traversers currently in the maze, including any branches or clones; current value unspecified
+- traverser_positions: current cell coordinates of each traverser, including branches; current values unspecified
+- traverser_motion_states: whether each traverser, including branches, is moving or idle; current values unspecified
+- traverser_algorithms: navigation algorithm assigned to each traverser for exploring an unknown maze; some include branching search; current values unspecified
+- traverser_map_knowledge: portion of the maze known to each traverser; branching traversers synchronize via shared visited memory; current values start empty and update through exploration
+- traverser_branching_ability: whether each traverser can perform branching search by duplicating itself; current values unspecified
+- branching_traverser_branches: active branches or clones for each branching-capable traverser; current values unspecified
+- branch_shared_visited_memory: global record of maze cells visited by branching traverser branches; current value starts empty and updates as they explore

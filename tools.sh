@@ -16,6 +16,8 @@ Available commands:
   run-all-at-once           Run Codex with all NL descriptions in one prompt (world-layout-all-at-once).
   run-stream-new-context    Run Codex line-by-line, cumulatively (world-layout-stream-new-context).
   run-stream-same-context   Run Codex line-by-line, one line per prompt (world-layout-stream-same-context).
+  run-variability [n]       Fire-and-forget: run n trials per strategy in background; logs/results under results/variability/.
+  run-variability [n]       Run n trials of each strategy into fresh dirs and save snapshots.
 
 If no layout_path is provided, concat-nl/nl-text pull NL lines from nl.txt in the repo root; latest-dim reads from world-layout-all-at-once/world-layout.txt; the runners read NL from nl.txt by default.
 
@@ -56,6 +58,9 @@ case "$command" in
     ;;
   run-stream-same-context)
     exec "$ROOT_DIR/tools/run_stream_same_context.sh" "$@"
+    ;;
+  run-variability)
+    exec "$ROOT_DIR/tools/run_variability.sh" "$@"
     ;;
   help|-h|--help)
     usage
